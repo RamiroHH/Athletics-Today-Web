@@ -1,0 +1,189 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff;
+    color: #000;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #0b2545;
+    color: white;
+    padding: 2rem 1rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: left;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    
+}
+
+nav li a:hover {
+    text-decoration: underline;
+}
+
+main.contenido {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.noticia {
+    grid-column: 1;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.noticia:active {
+    transform: scale(0.95);
+}
+
+.noticia img {
+    width: 100%;
+    display: block;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.noticia h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.noticia p {
+    margin: 0 1rem 1rem;
+}
+
+.info {
+    background-color: #0b2545;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    margin: 0 1rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.info:hover {
+    background-color: red;
+}
+
+aside {
+    grid-column: 2;
+    grid-row: 1;
+    background-color: #f4f4f4;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+}
+
+aside h3 {
+    color: #0b2545;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+aside ul,
+aside ol {
+    padding-left: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+aside li {
+    margin-bottom: 0.5rem;
+}
+
+aside a {
+    color: #000;
+    text-decoration: none;
+}
+
+aside a:hover {
+    text-decoration: underline;
+}
+
+section.tabla {
+    padding: 2rem;
+}
+
+section.tabla h2 {
+    font-size: 1.5rem;
+    color: #0b2545;
+    margin-bottom: 1rem;
+}
+
+section.tabla table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+section.tabla th,
+section.tabla td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+section.tabla th {
+    background-color: grey;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+section.tabla tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+section.tabla tr:hover {
+    background-color: #ffe8dc;
+}
+
+
+footer {
+    background-color: #0b2545;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    main.contenido {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .aside {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    section.tabla {
+        padding: 1rem;
+    }
+}
+
